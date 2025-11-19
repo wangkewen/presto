@@ -83,7 +83,7 @@ public class PrestoSparkShuffleSerializer
         {
             row.setArray(buffer.array());
             row.setOffset(buffer.arrayOffset());
-            row.setLength(buffer.array().length - buffer.arrayOffset());
+            row.setLength(buffer.array().length);
             row.setBuffer(buffer);
             return (T) tuple;
         }
@@ -101,7 +101,7 @@ public class PrestoSparkShuffleSerializer
         {
             row.setArray(buffer.array());
             row.setOffset(buffer.arrayOffset());
-            row.setLength(buffer.array().length - buffer.arrayOffset());
+            row.setLength(buffer.array().length);
             row.setBuffer(buffer);
             return (T) tuple;
         }
